@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver Joergensen</title>
+    <meta name="description" content="Personal website of Oliver Joergensen, a Political Science student with experience in customer service and a passion for learning new things.">
+    <meta name="keywords" content="Oliver Joergensen, Political Science, Customer Service, Learning">
+    <meta name="author" content="Oliver Joergensen">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            background-image: url('thinkpolitics.jpeg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #000;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0 0;
+            color: #000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #007BFF;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            padding: 40px 20px;
+        }
+
+        .container h2,
+        .container h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #000;
+        }
+
+        .container h4 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #000;
+        }
+
+        .container p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .welcome-container {
+            text-align: center;
+        }
+
+        .container ul {
+            font-size: 1.2em;
+            line-height: 1.6;
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .container ul li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid #007BFF;
+        }
+
+        .centered-text {
+            text-align: center;
+            color: #333;
+        }
+
+        #contact {
+            padding-bottom: 80px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .hobbies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .hobby-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-color: #f4f4f4; /* Fallback color */
+        }
+
+        .hobby-box p {
+            margin: 0;
+            padding: 20px 10px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hobby-box:nth-child(1) {
+            background-image: url('gym.png');
+        }
+
+        .hobby-box:nth-child(2) {
+            background-image: url('cooking.jpeg');
+        }
+
+        .hobby-box:nth-child(3) {
+            background-image: url('reading.jpeg');
+        }
+
+        .hobby-box:nth-child(4) {
+            background-image: url('politics.jpeg');
+        }
+
+        .hobby-box:nth-child(5) {
+            background-image: url('current.jpeg');
+        }
+
+        .hobby-box:nth-child(6) {
+            background-image: url('travel.jpeg');
+        }
+
+        .hobby-box:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Oliver Joergensen</h1>
+        <p>Welcome to my personal website</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#career">Career</a>
+        <a href="#skills">Skills</a>
+        <a href="#activities">Hobbies & Interests</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div id="home" class="container welcome-container">
+        <h2>Welcome</h2>
+        <p> Hi, my name is Oliver Joergensen. I am a Swiss citizen with Danish origins,
+            currently pursuing a Bachelor's degree in Political Science. I thrive in dynamic
+            environments and am passionate about new challenges, learning new things, and teamwork.</p>
+    </div>
+    <div id="about" class="container">
+        <h2>About Me</h2>
+        <p>My previous positions have equipped me with extensive experience in customer service and
+            payment processing, along with strong adaptability and teamwork skills developed through a variety of roles...</p>
+        <h3>Education</h3>
+        <ul>
+            <li>University of Zürich, BS: Major in Political Science, Minor in Mathematics</li>
+            <li>SIS Swiss International School, Matura, Zürich, 2018</li>
+        </ul>
+    </div>
+    <div id="career" class="container">
+        <h2>Career</h2>
+        <div class="centered-text">
+            <h4>Joe & the Juice (2018 - 2020)</h4>
+            <p>Part-Time Employee: Juicer responsible for customer contact, product manufacture for direct sale, sales, and cash register management.</p>
+            <h4>Kita Sumatra (03.2021 - 09.2021)</h4>
+            <p>Civilian service assignment involving household and environmental work, social pedagogy, and parental work.</p>
+            <h4>McDonald's (04.2022 - 02.2023)</h4>
+            <p>Crew Employee responsible for kitchen, storage, waste recycling, cleaning (cash desk, dining room, restrooms, parking lot, Playland, restaurant surroundings).</p>
+        </div>
+    </div>
+    <div id="skills" class="container">
+        <h2>Skills</h2>
+        <h3>Languages</h3>
+        <ul>
+            <li>German: Native</li>
+            <li>Danish: Native</li>
+            <li>English: Fluent</li>
+        </ul>
+        <h3>Other Skills</h3>
+        <ul>
+            <li>Analytical thinking from studying Political Science and Mathematics</li>
+            <li>Experienced in customer service and payment processing</li>
+        </ul>
+    </div>
+    <div id="activities" class="container">
+        <h2>Hobbies & Interests</h2>
+        <div class="hobbies-container">
+            <a href="https://example.com/fitness" class="hobby-box" style="background-image: url('gym.png');" target="_blank">
+                <p>Fitness</p>
+            </a>
+            <a href="https://example.com/cooking" class="hobby-box" style="background-image: url('cooking.jpeg');" target="_blank">
+                <p>Cooking</p>
+            </a>
+            <a href="https://example.com/reading" class="hobby-box" style="background-image: url('reading.jpeg');" target="_blank">
+                <p>Reading</p>
+            </a>
+            <a href="https://example.com/politics" class="hobby-box" style="background-image: url('politics.jpeg');" target="_blank">
+                <p>Politics</p>
+            </a>
+            <a href="https://example.com/current-affairs" class="hobby-box" style="background-image: url('current.jpeg');" target="_blank">
+                <p>Current Affairs</p>
+            </a>
+            <a href="https://example.com/travel" class="hobby-box" style="background-image: url('travel.jpeg');" target="_blank">
+                <p>Travel</p>
+            </a>
+        </div>
+    </div>
+    <div id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:oliver.joergensen@outlook.com">oliver.joergensen@outlook.com</a></p>
+    </div>
+    <footer>
+        <p>© 2024 Oliver Joergensen. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
