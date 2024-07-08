@@ -13,6 +13,7 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            scroll-behavior: smooth;
         }
 
         nav {
@@ -20,6 +21,9 @@
             color: #fff;
             padding: 10px 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -62,6 +66,26 @@
             z-index: 2;
         }
 
+        header .cta {
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        header .cta a {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header .cta a:hover {
+            background-color: #0056b3;
+        }
+
         .container {
             padding: 40px 20px;
             text-align: center;
@@ -79,7 +103,7 @@
 
         .countries {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             max-width: 1000px;
             margin: 0 auto;
@@ -90,6 +114,16 @@
             padding: 20px;
             border-left: 5px solid #007BFF;
             transition: transform 0.3s, background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .country img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
 
         .country:hover {
@@ -121,6 +155,16 @@
             margin: 0 10px;
             text-decoration: none;
             font-size: 1.5em;
+        }
+
+        footer .footer-links {
+            margin-top: 10px;
+        }
+
+        footer .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
         }
 
         @media (max-width: 600px) {
@@ -161,76 +205,96 @@
     <header>
         <h1>Travel</h1>
         <p>Explore the world with Oliver Joergensen</p>
+        <div class="cta">
+            <a href="#countries">Discover More</a>
+        </div>
     </header>
     <div class="container" id="countries">
         <h2>Welcome to my travel page</h2>
         <p>Here you will find some highlights and memorable experiences from the countries I have visited.</p>
         <div class="countries">
             <div class="country">
+                <img src="north-america.jpg" alt="North America">
                 <h3>North America</h3>
                 <p>Explored the vibrant cities of New York and Los Angeles, enjoyed the natural beauty of the Grand Canyon, and experienced the cultural diversity across different states.</p>
             </div>
             <div class="country">
+                <img src="peru.jpg" alt="Peru">
                 <h3>Peru</h3>
                 <p>Visited the interesting and beautiful city of Lima.</p>
             </div>
             <div class="country">
+                <img src="japan.jpg" alt="Japan">
                 <h3>Japan</h3>
                 <p>Enjoyed the bustling streets of Tokyo, the serene temples of Kyoto, and the beautiful cherry blossoms during spring.</p>
             </div>
             <div class="country">
+                <img src="china.jpg" alt="China">
                 <h3>China</h3>
                 <p>Explored the Great Wall, experienced the vibrant life in Beijing and Shanghai.</p>
             </div>
             <div class="country">
+                <img src="norway.jpg" alt="Norway">
                 <h3>Norway</h3>
                 <p>Marveled at the stunning fjords, enjoyed the midnight sun in the summer, and visited the charming city of Oslo.</p>
             </div>
             <div class="country">
+                <img src="denmark.jpg" alt="Denmark">
                 <h3>Denmark</h3>
                 <p>Explored the historic streets of Copenhagen, visited the famous Tivoli Gardens, and enjoyed the Danish "hygge" culture.</p>
             </div>
             <div class="country">
+                <img src="germany.jpg" alt="Germany">
                 <h3>Germany</h3>
                 <p>Visited the beautiful cities of Düsseldorf and Hamburg.</p>
             </div>
             <div class="country">
+                <img src="austria.jpg" alt="Austria">
                 <h3>Austria</h3>
                 <p>Experienced the cultural richness of Vienna, skied in the Alps, and enjoyed the scenic beauty of Salzburg.</p>
             </div>
             <div class="country">
+                <img src="morocco.jpg" alt="Morocco">
                 <h3>Morocco</h3>
                 <p>Explored the vibrant markets of Marrakech, and experienced the astonishing Sahara Desert.</p>
             </div>
             <div class="country">
+                <img src="france.jpg" alt="France">
                 <h3>France</h3>
                 <p>Visited the iconic Eiffel Tower in Paris, enjoyed the wine regions of Bordeaux and Burgundy, and relaxed on the French Riviera.</p>
             </div>
             <div class="country">
+                <img src="spain.jpg" alt="Spain">
                 <h3>Spain</h3>
                 <p>Experienced the lively culture of Barcelona, the historic sites of Madrid, and the beautiful beaches and cities of Mallorca, Ibiza, San Sebastián, and Valencia.</p>
             </div>
             <div class="country">
+                <img src="italy.jpg" alt="Italy">
                 <h3>Italy</h3>
                 <p>Explored the ancient ruins of Rome, enjoyed the vibrant city of Milano.</p>
             </div>
             <div class="country">
+                <img src="hungary.jpg" alt="Hungary">
                 <h3>Hungary</h3>
                 <p>Visited the historic city of Budapest, and experienced the rich cultural heritage.</p>
             </div>
             <div class="country">
+                <img src="turkey.jpg" alt="Turkey">
                 <h3>Turkey</h3>
                 <p>Explored the vibrant city of Istanbul, and enjoyed the beaches of Antalya.</p>
             </div>
             <div class="country">
+                <img src="dominican-republic.jpg" alt="Dominican Republic">
                 <h3>Dominican Republic</h3>
                 <p>Relaxed on the beautiful beaches of Punta Cana, and enjoyed the vibrant local culture.</p>
             </div>
             <div class="country">
+                <img src="iceland.jpg" alt="Iceland">
                 <h3>Iceland</h3>
                 <p>Marveled at the stunning waterfalls and geysers, soaked in the Blue Lagoon, and experienced the unique landscapes of this beautiful island.</p>
             </div>
             <div class="country">
+                <img src="england.jpg" alt="England">
                 <h3>England</h3>
                 <p>Visited the historic and vibrant cities of London and Reading.</p>
             </div>
@@ -242,6 +306,11 @@
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="#privacy-policy">Privacy Policy</a>
+            <a href="#terms-of-service">Terms of Service</a>
+            <a href="#contact">Contact</a>
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
