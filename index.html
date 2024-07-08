@@ -16,12 +16,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
     <style>
         :root {
-            --primary-color: #1e90ff; /* Bright blue color */
-            --secondary-color: #4682b4; /* Steel blue color */
-            --background-color: #f0f8ff; /* Alice blue */
+            --primary-color: #1e90ff;
+            --secondary-color: #4682b4;
+            --background-color: #f0f8ff;
             --text-color: #333;
             --light-text-color: #666;
-            --hover-color: #1c86ee; /* Dodger blue */
+            --hover-color: #1c86ee;
             --font-family: 'Raleway', sans-serif;
         }
 
@@ -99,6 +99,11 @@
             color: #f9f9f9;
         }
 
+        .navbar-nav {
+            margin: auto;
+            justify-content: center;
+        }
+
         .container {
             padding: 40px 20px;
             max-width: 1200px;
@@ -164,7 +169,6 @@
             background-color: var(--hover-color);
         }
 
-        /* Additional styles for better accessibility */
         a:focus {
             outline: 2px dashed var(--primary-color);
             outline-offset: 2px;
@@ -209,6 +213,22 @@
             transform: scale(1.05);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer-icons a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .footer-icons a:hover {
+            color: var(--hover-color);
+        }
     </style>
 </head>
 
@@ -223,7 +243,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
@@ -328,12 +348,13 @@
     </main>
     <footer class="text-center py-3 bg-dark text-light">
         <p>© 2024 Oliver Joergensen. All rights reserved.</p>
-        <div>
-            <a href="https://linkedin.com" target="_blank" class="text-light">LinkedIn</a> |
-            <a href="https://Instagram.com" target="_blank" class="text-light">Instagram</a>
+        <div class="footer-icons">
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('scroll', function () {
             const sections = document.querySelectorAll('section');
