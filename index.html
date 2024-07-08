@@ -326,27 +326,27 @@
             <div class="hobbies-container">
                 <a href="fitness.html" class="hobby-box" style="background-image: url('gym.png');" target="_blank">
                     <p>Fitness</p>
-                    <img src="gym.jpg" alt="Fitness" style="display:none;">
+                    <img src="gym.png" alt="Fitness" style="display:none;">
                 </a>
                 <a href="cooking.html" class="hobby-box" style="background-image: url('cooking.jpeg');" target="_blank">
                     <p>Cooking</p>
-                    <img src="cooking.jpg" alt="Cooking" style="display:none;">
+                    <img src="cooking.jpeg" alt="Cooking" style="display:none;">
                 </a>
                 <a href="reading.html" class="hobby-box" style="background-image: url('reading.jpeg');" target="_blank">
                     <p>Reading</p>
-                    <img src="reading.jpg" alt="Reading" style="display:none;">
+                    <img src="reading.jpeg" alt="Reading" style="display:none;">
                 </a>
                 <a href="politics.html" class="hobby-box" style="background-image: url('politics.jpeg');" target="_blank">
                     <p>Politics</p>
-                    <img src="politics.jpg" alt="Politics" style="display:none;">
+                    <img src="politics.jpeg alt="Politics" style="display:none;">
                 </a>
                 <a href="current.html" class="hobby-box" style="background-image: url('current.jpeg');" target="_blank">
                     <p>Current Affairs</p>
-                    <img src="current.jpg" alt="Current Affairs" style="display:none;">
+                    <img src="current.jpeg" alt="Current Affairs" style="display:none;">
                 </a>
                 <a href="travel.html" class="hobby-box" style="background-image: url('travel.jpeg');" target="_blank">
                     <p>Travel</p>
-                    <img src="travel.jpg" alt="Travel" style="display:none;">
+                    <img src="travel.jpeg" alt="Travel" style="display:none;">
                 </a>
             </div>
         </section>
@@ -363,19 +363,19 @@
         </div>
     </footer>
     <script>
-        document.addEventListener('scroll', function() {
+        document.addEventListener('scroll', function () {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('nav a');
             let index = sections.length;
 
-            while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+            while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
 
             navLinks.forEach((link) => link.classList.remove('active'));
             navLinks[index].classList.add('active');
         });
 
         document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
