@@ -8,18 +8,31 @@
     <meta name="description" content="Personal website of Oliver Joergensen, a Political Science student with experience in customer service and a passion for learning new things.">
     <meta name="keywords" content="Oliver Joergensen, Political Science, Customer Service, Learning">
     <meta name="author" content="Oliver Joergensen">
+    <meta property="og:title" content="Oliver Joergensen" />
+    <meta property="og:description" content="Personal website of Oliver Joergensen, a Political Science student with experience in customer service and a passion for learning new things." />
+    <meta property="og:image" content="url-to-image.jpg" />
+    <meta property="og:url" content="url-to-website.com" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #0056b3;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --light-text-color: #666;
+            --hover-color: #003d80;
+        }
+
         body {
             font-family: 'Raleway', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
 
         header {
-            background-color: #007BFF;
+            background-color: var(--primary-color);
             color: #fff;
             padding: 100px 20px;
             text-align: center;
@@ -27,6 +40,23 @@
             background-size: cover;
             background-position: center;
             position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        header h1,
+        header p {
+            position: relative;
+            z-index: 2;
         }
 
         header h1 {
@@ -46,8 +76,11 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #0056b3;
+            background-color: var(--secondary-color);
             padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         nav a {
@@ -59,13 +92,10 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        nav a:hover {
-            background-color: #003d80;
-            color: #f9f9f9;
-        }
-
+        nav a:hover,
         nav a.active {
-            background-color: #003d80;
+            background-color: var(--hover-color);
+            color: #f9f9f9;
         }
 
         .container {
@@ -79,7 +109,7 @@
             font-size: 2.5em;
             margin-bottom: 20px;
             text-align: center;
-            color: #333;
+            color: var(--text-color);
         }
 
         .container h4 {
@@ -93,7 +123,7 @@
             font-size: 1.2em;
             line-height: 1.6;
             text-align: center;
-            color: #666;
+            color: var(--light-text-color);
         }
 
         .welcome-container {
@@ -106,20 +136,20 @@
             list-style: none;
             padding: 0;
             text-align: left;
-            color: #666;
+            color: var(--light-text-color);
         }
 
         .container ul li {
             background-color: #fff;
             margin: 10px 0;
             padding: 15px;
-            border-left: 5px solid #007BFF;
+            border-left: 5px solid var(--primary-color);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .centered-text {
             text-align: center;
-            color: #333;
+            color: var(--text-color);
         }
 
         #contact {
@@ -127,11 +157,10 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: var(--text-color);
             color: #fff;
             text-align: center;
             padding: 20px;
-            position: fixed;
             width: 100%;
             bottom: 0;
         }
@@ -149,7 +178,7 @@
             overflow: hidden;
             width: 200px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
             background-size: cover;
             background-position: center;
             background-color: #e0e0e0;
@@ -172,6 +201,10 @@
         .hobby-box:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hobby-box:hover p {
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
         @media (max-width: 768px) {
@@ -210,6 +243,25 @@
                 height: 150px;
             }
         }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        #back-to-top:hover {
+            background-color: var(--hover-color);
+        }
     </style>
 </head>
 
@@ -218,7 +270,7 @@
         <h1>Oliver Joergensen</h1>
         <p>Welcome to my personal website</p>
     </header>
-    <nav>
+    <nav aria-label="Main Navigation">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#career">Career</a>
@@ -226,77 +278,129 @@
         <a href="#activities">Hobbies & Interests</a>
         <a href="#contact">Contact</a>
     </nav>
-    <div id="home" class="container welcome-container">
-        <h2>Welcome</h2>
-        <p> Hi, my name is Oliver Joergensen. I am a Swiss citizen with Danish origins,
-            currently pursuing a Bachelor's degree in Political Science. I thrive in dynamic
-            environments and am passionate about new challenges, learning new things, and teamwork.</p>
-    </div>
-    <div id="about" class="container">
-        <h2>About Me</h2>
-        <p>My previous positions have equipped me with extensive experience in customer service and
-            payment processing, along with strong adaptability and teamwork skills developed through a variety of roles...</p>
-        <h3>Education</h3>
-        <ul>
-            <li>University of Zürich, BS: Major in Political Science, Minor in Mathematics</li>
-            <li>SIS Swiss International School, Matura, Zürich, 2018</li>
-        </ul>
-    </div>
-    <div id="career" class="container">
-        <h2>Career</h2>
-        <div class="centered-text">
-            <h4>Joe & the Juice (2018 - 2020)</h4>
-            <p>Part-Time Employee: Juicer responsible for customer contact, product manufacture for direct sale, sales, and cash register management.</p>
-            <h4>Kita Sumatra (03.2021 - 09.2021)</h4>
-            <p>Civilian service assignment involving household and environmental work, social pedagogy, and parental work.</p>
-            <h4>McDonald's (04.2022 - 02.2023)</h4>
-            <p>Crew Employee responsible for kitchen, storage, waste recycling, cleaning (cash desk, dining room, restrooms, parking lot, Playland, restaurant surroundings).</p>
-        </div>
-    </div>
-    <div id="skills" class="container">
-        <h2>Skills</h2>
-        <h3>Languages</h3>
-        <ul>
-            <li>German: Native</li>
-            <li>Danish: Native</li>
-            <li>English: Fluent</li>
-        </ul>
-        <h3>Other Skills</h3>
-        <ul>
-            <li>Analytical thinking from studying Political Science and Mathematics</li>
-            <li>Experienced in customer service and payment processing</li>
-        </ul>
-    </div>
-    <div id="activities" class="container">
-        <h2>Hobbies & Interests</h2>
-        <div class="hobbies-container">
-            <a href="fitness.html" class="hobby-box" style="background-image: url('gym.png');" target="_blank">
-                <p>Fitness</p>
-            </a>
-            <a href="cooking.html" class="hobby-box" style="background-image: url('cooking.jpeg');" target="_blank">
-                <p>Cooking</p>
-            </a>
-            <a href="reading.html" class="hobby-box" style="background-image: url('reading.jpeg');" target="_blank">
-                <p>Reading</p>
-            </a>
-            <a href="politics.html" class="hobby-box" style="background-image: url('politics.jpeg');" target="_blank">
-                <p>Politics</p>
-            </a>
-            <a href="current.html" class="hobby-box" style="background-image: url('current.jpeg');" target="_blank">
-                <p>Current Affairs</p>
-            </a>
-            <a href="travel.html" class="hobby-box" style="background-image: url('travel.jpeg');" target="_blank">
-                <p>Travel</p>
-            </a>
-        </div>
-    </div>
-    <div id="contact" class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:oliver.joergensen@outlook.com">oliver.joergensen@outlook.com</a></p>
-    </div>
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+    <main>
+        <section id="home" class="container welcome-container">
+            <h2>Welcome</h2>
+            <p> Hi, my name is Oliver Joergensen. I am a Swiss citizen with Danish origins,
+                currently pursuing a Bachelor's degree in Political Science. I thrive in dynamic
+                environments and am passionate about new challenges, learning new things, and teamwork.</p>
+        </section>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>My previous positions have equipped me with extensive experience in customer service and
+                payment processing, along with strong adaptability and teamwork skills developed through a variety of roles...</p>
+            <h3>Education</h3>
+            <ul>
+                <li>University of Zürich, BS: Major in Political Science, Minor in Mathematics</li>
+                <li>SIS Swiss International School, Matura, Zürich, 2018</li>
+            </ul>
+        </section>
+        <section id="career" class="container">
+            <h2>Career</h2>
+            <div class="centered-text">
+                <h4>Joe & the Juice (2018 - 2020)</h4>
+                <p>Part-Time Employee: Juicer responsible for customer contact, product manufacture for direct sale, sales, and cash register management.</p>
+                <h4>Kita Sumatra (03.2021 - 09.2021)</h4>
+                <p>Civilian service assignment involving household and environmental work, social pedagogy, and parental work.</p>
+                <h4>McDonald's (04.2022 - 02.2023)</h4>
+                <p>Crew Employee responsible for kitchen, storage, waste recycling, cleaning (cash desk, dining room, restrooms, parking lot, Playland, restaurant surroundings).</p>
+            </div>
+        </section>
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <h3>Languages</h3>
+            <ul>
+                <li>German: Native</li>
+                <li>Danish: Native</li>
+                <li>English: Fluent</li>
+            </ul>
+            <h3>Other Skills</h3>
+            <ul>
+                <li>Analytical thinking from studying Political Science and Mathematics</li>
+                <li>Experienced in customer service and payment processing</li>
+            </ul>
+        </section>
+        <section id="activities" class="container">
+            <h2>Hobbies & Interests</h2>
+            <div class="hobbies-container">
+                <a href="fitness.html" class="hobby-box" style="background-image: url('gym.png');" target="_blank">
+                    <p>Fitness</p>
+                    <img src="gym.jpg" alt="Fitness" style="display:none;">
+                </a>
+                <a href="cooking.html" class="hobby-box" style="background-image: url('cooking.jpeg');" target="_blank">
+                    <p>Cooking</p>
+                    <img src="cooking.jpg" alt="Cooking" style="display:none;">
+                </a>
+                <a href="reading.html" class="hobby-box" style="background-image: url('reading.jpeg');" target="_blank">
+                    <p>Reading</p>
+                    <img src="reading.jpg" alt="Reading" style="display:none;">
+                </a>
+                <a href="politics.html" class="hobby-box" style="background-image: url('politics.jpeg');" target="_blank">
+                    <p>Politics</p>
+                    <img src="politics.jpg" alt="Politics" style="display:none;">
+                </a>
+                <a href="current.html" class="hobby-box" style="background-image: url('current.jpeg');" target="_blank">
+                    <p>Current Affairs</p>
+                    <img src="current.jpg" alt="Current Affairs" style="display:none;">
+                </a>
+                <a href="travel.html" class="hobby-box" style="background-image: url('travel.jpeg');" target="_blank">
+                    <p>Travel</p>
+                    <img src="travel.jpg" alt="Travel" style="display:none;">
+                </a>
+            </div>
+        </section>
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:oliver.joergensen@outlook.com">oliver.joergensen@outlook.com</a></p>
+        </section>
+    </main>
     <footer>
         <p>© 2024 Oliver Joergensen. All rights reserved.</p>
+        <div>
+            <a href="https://linkedin.com/in/oliverjoergensen" target="_blank">LinkedIn</a> |
+            <a href="https://twitter.com/oliverjoergensen" target="_blank">Twitter</a>
+        </div>
     </footer>
+    <script>
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            let index = sections.length;
+
+            while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+            navLinks.forEach((link) => link.classList.remove('active'));
+            navLinks[index].classList.add('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
