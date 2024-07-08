@@ -18,7 +18,7 @@
         :root {
             --primary-color: #1e90ff;
             --secondary-color: #4682b4;
-            --background-color: #f0f8ff;
+            --background-color: #e9f5ff;
             --text-color: #333;
             --light-text-color: #666;
             --hover-color: #1c86ee;
@@ -75,10 +75,10 @@
 
         nav {
             background-color: var(--secondary-color);
-            position: fixed;
-            width: 100%;
+            position: sticky;
             top: 0;
             z-index: 1000;
+            opacity: 0.9;
         }
 
         nav .navbar-brand {
@@ -106,13 +106,9 @@
         }
 
         .container {
-            padding: 80px 20px 40px;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        section {
-            padding: 60px 0;
         }
 
         .hobbies-container {
