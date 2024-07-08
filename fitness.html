@@ -31,7 +31,7 @@
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         header {
@@ -77,10 +77,11 @@
         }
 
         nav {
-            background-color: var(--secondary-color);
+            background-color: rgba(0, 86, 179, 0.9);
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: background-color 0.3s ease;
         }
 
         nav a {
@@ -98,9 +99,34 @@
         }
 
         .container {
-            padding: 40px 20px;
+            padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+        }
+
+        .list-group-item {
+            font-size: 1.2em;
+            padding: 15px 20px;
         }
 
         .hobbies-container {
@@ -156,13 +182,13 @@
             font-size: 1.5em;
             cursor: pointer;
             z-index: 10;
+            transition: background-color 0.3s ease;
         }
 
         #back-to-top:hover {
             background-color: var(--hover-color);
         }
 
-        /* Additional styles for better accessibility */
         a:focus {
             outline: 2px dashed var(--primary-color);
             outline-offset: 2px;
@@ -178,6 +204,25 @@
             clip: rect(0, 0, 0, 0);
             border: 0;
         }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -186,7 +231,7 @@
         <h1>Oliver Joergensen</h1>
         <p>Welcome to my personal website</p>
     </header>
-    <nav aria-label="Main Navigation" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav aria-label="Main Navigation" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Oliver Joergensen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
