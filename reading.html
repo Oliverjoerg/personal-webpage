@@ -7,73 +7,116 @@
     <title>Reading - Oliver Joergensen</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #f4f4f4;
+            --text-color: #333;
+            --background-color: #fff;
+            --header-height: 60px;
+        }
+
         body {
             font-family: 'Raleway', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
         }
 
         header {
-            background-color: #007BFF;
+            background-color: var(--primary-color);
             color: #fff;
-            padding: 150px 20px;
+            padding: 50px 20px;
             text-align: center;
-            background-image: url('books.jpeg'); 
+            background-image: url('books.jpeg');
             background-size: cover;
             background-position: center;
             position: relative;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
 
         header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin: 0;
-            color: #000;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         .container {
             padding: 40px 20px;
-            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .container h2 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 20px;
-            color: #000;
+            color: var(--primary-color);
         }
 
         .container p {
             font-size: 1.2em;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-color);
+            margin-bottom: 40px;
         }
 
         .books {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
         .book {
-            background-color: #fff;
-            margin: 20px 0;
+            background-color: var(--background-color);
             padding: 20px;
-            border-left: 5px solid #007BFF;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .book:hover {
+            transform: translateY(-5px);
         }
 
         .book h3 {
             margin-top: 0;
+            font-size: 1.5em;
+            color: var(--primary-color);
         }
 
         footer {
-            background-color: #333;
+            background-color: var(--primary-color);
             color: #fff;
             text-align: center;
             padding: 20px;
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .books {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .container h2 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
