@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <meta name="description" content="Personal website of Oliver Joergensen, a Political Science student with experience in customer service and a passion for learning new things.">
-    <meta name="keywords" content="Oliver Joergensen, Political Science, Customer Service, Learning">
+    <title>Oliver Joergensen | Fitness</title>
+    <meta name="description" content="Explore the fitness journey and activities of Oliver Joergensen, including football, handball, tennis, MMA, and more.">
+    <meta name="keywords" content="Oliver Joergensen, Fitness, Football, Handball, Tennis, MMA, Gym, Skiing, Snowboarding, Cycling, Volleyball">
     <meta name="author" content="Oliver Joergensen">
-    <meta property="og:title" content="Personal Website" />
-    <meta property="og:description" content="Personal website of Oliver Joergensen, a Political Science student with experience in customer service and a passion for learning new things." />
-    <meta property="og:image" content="url-to-image.jpg" />
-    <meta property="og:url" content="url-to-website.com" />
+    <meta property="og:title" content="Oliver Joergensen | Fitness" />
+    <meta property="og:description" content="Explore the fitness journey and activities of Oliver Joergensen, including football, handball, tennis, MMA, and more." />
+    <meta property="og:image" content="fitness-header.jpg" />
+    <meta property="og:url" content="url-to-website.com/fitness.html" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -36,7 +36,7 @@
         }
 
         header {
-            background: url('globe.tiff') center/cover no-repeat, rgba(0, 0, 0, 0.5);
+            background: url('fitness-header.jpg') center/cover no-repeat, rgba(0, 0, 0, 0.5);
             color: #fff;
             padding: 100px 20px;
             text-align: center;
@@ -112,13 +112,13 @@
             margin: 0 auto;
         }
 
-        .hobbies-container {
+        .activities-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
 
-        .hobby-box {
+        .activity-box {
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
@@ -133,7 +133,7 @@
             height: 200px;
         }
 
-        .hobby-box p {
+        .activity-box p {
             margin: 0;
             padding: 20px 10px;
             font-size: 1.2em;
@@ -143,48 +143,13 @@
             box-sizing: border-box;
         }
 
-        .hobby-box:hover {
+        .activity-box:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .hobby-box:hover p {
+        .activity-box:hover p {
             background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        #back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background-color: var(--primary-color);
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            padding: 10px 15px;
-            font-size: 1.5em;
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        #back-to-top:hover {
-            background-color: var(--hover-color);
-        }
-
-        a:focus {
-            outline: 2px dashed var(--primary-color);
-            outline-offset: 2px;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
         }
 
         .card {
@@ -222,8 +187,8 @@
 
 <body>
     <header>
-        <h1>Oliver Joergensen</h1>
-        <p>Welcome to my personal website</p>
+        <h1>Fitness Journey</h1>
+        <p>Explore my past and current fitness activities</p>
     </header>
     <nav aria-label="Main Navigation" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
@@ -236,16 +201,13 @@
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#past-sports">Past Sports</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#career">Career</a>
+                        <a class="nav-link" href="#current-activities">Current Activities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#activities">Hobbies & Interests</a>
+                        <a class="nav-link" href="#hobbies">Hobbies</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -254,77 +216,58 @@
             </div>
         </div>
     </nav>
-    <button id="back-to-top" aria-label="Back to top">↑</button>
     <main>
         <section id="home" class="container welcome-container">
-            <h2 class="text-center my-4">Welcome</h2>
-            <p class="text-center">Hi, my name is Oliver Joergensen. I am a Swiss citizen with Danish origins, currently pursuing a Bachelor's degree in Political Science. I thrive in dynamic environments and am passionate about new challenges, learning new things, and teamwork.</p>
+            <h2 class="text-center my-4">Welcome to My Fitness Page</h2>
+            <p class="text-center">Hi, my name is Oliver Joergensen. Here you can explore my journey through various sports and fitness activities that have shaped my life.</p>
         </section>
-        <section id="about" class="container">
-            <h2 class="text-center my-4">About Me</h2>
-            <article class="card">
-                <p>My previous positions have equipped me with extensive experience in customer service and payment processing, along with strong adaptability and teamwork skills developed through a variety of roles...</p>
-                <h3 class="text-center my-3">Education</h3>
-                <ul class="list-group">
-                    <li class="list-group-item">University of Zürich, BS: Major in Political Science, Minor in Mathematics</li>
-                    <li class="list-group-item">SIS Swiss International School, Matura, Zürich, 2018</li>
-                </ul>
-            </article>
+        <section id="past-sports" class="container">
+            <h2 class="text-center my-4">Past Sports</h2>
+            <div class="activities-container">
+                <div class="activity-box" style="background-image: url('football.jpg');">
+                    <p>Football</p>
+                    <img src="football.jpg" alt="Football" class="sr-only" loading="lazy">
+                </div>
+                <div class="activity-box" style="background-image: url('handball.jpg');">
+                    <p>Handball</p>
+                    <img src="handball.jpg" alt="Handball" class="sr-only" loading="lazy">
+                </div>
+                <div class="activity-box" style="background-image: url('tennis.jpg');">
+                    <p>Tennis</p>
+                    <img src="tennis.jpg" alt="Tennis" class="sr-only" loading="lazy">
+                </div>
+                <div class="activity-box" style="background-image: url('mma.jpg');">
+                    <p>MMA</p>
+                    <img src="mma.jpg" alt="MMA" class="sr-only" loading="lazy">
+                </div>
+            </div>
         </section>
-        <section id="career" class="container">
-            <h2 class="text-center my-4">Career</h2>
-            <article class="card">
-                <h4>Joe & the Juice (2018 - 2020)</h4>
-                <p>Part-Time Employee: Juicer responsible for customer contact, product manufacture for direct sale, sales, and cash register management.</p>
-                <h4>Kita Sumatra (03.2021 - 09.2021)</h4>
-                <p>Civilian service assignment involving household and environmental work, social pedagogy, and parental work.</p>
-                <h4>McDonald's (04.2022 - 02.2023)</h4>
-                <p>Crew Employee responsible for kitchen, storage, waste recycling, cleaning (cash desk, dining room, restrooms, parking lot, Playland, restaurant surroundings).</p>
-            </article>
+        <section id="current-activities" class="container">
+            <h2 class="text-center my-4">Current Activities</h2>
+            <div class="activity-box" style="background-image: url('gym.jpg');">
+                <p>Gym</p>
+                <img src="gym.jpg" alt="Gym" class="sr-only" loading="lazy">
+            </div>
         </section>
-        <section id="skills" class="container">
-            <h2 class="text-center my-4">Skills</h2>
-            <article class="card">
-                <h3 class="text-center my-3">Languages</h3>
-                <ul class="list-group">
-                    <li class="list-group-item">German: Native</li>
-                    <li class="list-group-item">Danish: Native</li>
-                    <li class="list-group-item">English: Fluent</li>
-                </ul>
-                <h3 class="text-center my-3">Other Skills</h3>
-                <ul class="list-group">
-                    <li class="list-group-item">Analytical thinking from studying Political Science and Mathematics</li>
-                    <li class="list-group-item">Experienced in customer service and payment processing</li>
-                </ul>
-            </article>
-        </section>
-        <section id="activities" class="container">
+        <section id="hobbies" class="container">
             <h2 class="text-center my-4">Hobbies & Interests</h2>
-            <div class="hobbies-container">
-                <a href="fitness.html" class="hobby-box" style="background-image: url('gym.png');" target="_blank">
-                    <p>Fitness</p>
-                    <img src="gym.png" alt="Fitness" class="sr-only" loading="lazy">
-                </a>
-                <a href="cooking.html" class="hobby-box" style="background-image: url('cooking.jpeg');" target="_blank">
-                    <p>Cooking</p>
-                    <img src="cooking.jpeg" alt="Cooking" class="sr-only" loading="lazy">
-                </a>
-                <a href="reading.html" class="hobby-box" style="background-image: url('reading.jpeg');" target="_blank">
-                    <p>Reading</p>
-                    <img src="reading.jpeg" alt="Reading" class="sr-only" loading="lazy">
-                </a>
-                <a href="politics.html" class="hobby-box" style="background-image: url('politics.jpeg');" target="_blank">
-                    <p>Politics</p>
-                    <img src="politics.jpeg" alt="Politics" class="sr-only" loading="lazy">
-                </a>
-                <a href="current.html" class="hobby-box" style="background-image: url('current.jpeg');" target="_blank">
-                    <p>Current Affairs</p>
-                    <img src="current.jpeg" alt="Current Affairs" class="sr-only" loading="lazy">
-                </a>
-                <a href="travel.html" class="hobby-box" style="background-image: url('travel.jpeg');" target="_blank">
-                    <p>Travel</p>
-                    <img src="travel.jpeg" alt="Travel" class="sr-only" loading="lazy">
-                </a>
+            <div class="activities-container">
+                <div class="activity-box" style="background-image: url('skiing.jpg');">
+                    <p>Skiing</p>
+                    <img src="skiing.jpg" alt="Skiing" class="sr-only" loading="lazy">
+                </div>
+                <div class="activity-box" style="background-image: url('snowboarding.jpg');">
+                    <p>Snowboarding</p>
+                    <img src="snowboarding.jpg" alt="Snowboarding" class="sr-only" loading="lazy">
+                </div>
+                <div class="activity-box" style="background-image: url('cycling.jpg');">
+                    <p>Cycling</p>
+                    <img src="cycling.jpg" alt="Cycling" class="sr-only" loading="lazy">
+                </div>
+                <div class="activity-box" style="background-image: url('volleyball.jpg');">
+                    <p>Volleyball</p>
+                    <img src="volleyball.jpg" alt="Volleyball" class="sr-only" loading="lazy">
+                </div>
             </div>
         </section>
         <section id="contact" class="container">
@@ -362,39 +305,6 @@
                 });
             });
         });
-
-        // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Oliver Joergensen",
-        "jobTitle": "Political Science Student",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Zurich",
-            "addressCountry": "Switzerland"
-        },
-        "alumniOf": "University of Zürich",
-        "knowsAbout": ["Political Science", "Customer Service"]
-    }
     </script>
 </body>
 
