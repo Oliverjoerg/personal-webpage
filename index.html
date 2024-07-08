@@ -14,14 +14,14 @@
             font-family: 'Raleway', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
         }
 
         header {
             background-color: #007BFF;
             color: #fff;
-            padding: 200px 20px;
+            padding: 100px 20px;
             text-align: center;
             background-image: url('globe.tiff');
             background-size: cover;
@@ -32,19 +32,22 @@
         header h1 {
             font-size: 3em;
             margin: 0;
-            color: #000;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         header p {
             font-size: 1.5em;
             margin: 10px 0 0;
-            color: #000;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #007BFF;
+            background-color: #0056b3;
+            padding: 10px 0;
         }
 
         nav a {
@@ -53,15 +56,22 @@
             text-decoration: none;
             text-align: center;
             display: block;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #0056b3;
+            background-color: #003d80;
+            color: #f9f9f9;
+        }
+
+        nav a.active {
+            background-color: #003d80;
         }
 
         .container {
             padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .container h2,
@@ -69,20 +79,21 @@
             font-size: 2.5em;
             margin-bottom: 20px;
             text-align: center;
-            color: #000;
+            color: #333;
         }
 
         .container h4 {
             font-size: 1.5em;
             margin-bottom: 10px;
             text-align: center;
-            color: #000;
+            color: #555;
         }
 
         .container p {
             font-size: 1.2em;
             line-height: 1.6;
             text-align: center;
+            color: #666;
         }
 
         .welcome-container {
@@ -95,6 +106,7 @@
             list-style: none;
             padding: 0;
             text-align: left;
+            color: #666;
         }
 
         .container ul li {
@@ -102,6 +114,7 @@
             margin: 10px 0;
             padding: 15px;
             border-left: 5px solid #007BFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .centered-text {
@@ -136,10 +149,11 @@
             overflow: hidden;
             width: 200px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             background-size: cover;
             background-position: center;
-            background-color: #f4f4f4; /* Fallback color */
+            background-color: #f4f4f4;
+            position: relative;
         }
 
         .hobby-box p {
@@ -148,34 +162,47 @@
             font-size: 1.2em;
             color: #fff;
             background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .hobby-box:nth-child(1) {
-            background-image: url('gym.png');
-        }
-
-        .hobby-box:nth-child(2) {
-            background-image: url('cooking.jpeg');
-        }
-
-        .hobby-box:nth-child(3) {
-            background-image: url('reading.jpeg');
-        }
-
-        .hobby-box:nth-child(4) {
-            background-image: url('politics.jpeg');
-        }
-
-        .hobby-box:nth-child(5) {
-            background-image: url('current.jpeg');
-        }
-
-        .hobby-box:nth-child(6) {
-            background-image: url('travel.jpeg');
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .hobby-box:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 20px;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .container h2,
+            .container h3 {
+                font-size: 2em;
+            }
+
+            .container h4 {
+                font-size: 1.2em;
+            }
+
+            .container p,
+            .container ul {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -186,7 +213,7 @@
         <p>Welcome to my personal website</p>
     </header>
     <nav>
-        <a href="#home">Home</a>
+        <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#career">Career</a>
         <a href="#skills">Skills</a>
