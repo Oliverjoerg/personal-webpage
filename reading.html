@@ -22,6 +22,7 @@
             padding: 0;
             background-color: var(--secondary-color);
             color: var(--text-color);
+            line-height: 1.6;
         }
 
         header {
@@ -91,7 +92,7 @@
 
         .books {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
 
@@ -122,8 +123,20 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+
             .books {
                 grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .container h2 {
+                font-size: 2em;
             }
         }
 
@@ -133,11 +146,11 @@
             }
 
             header h1 {
-                font-size: 2.5em;
+                font-size: 2em;
             }
 
             .container h2 {
-                font-size: 2em;
+                font-size: 1.5em;
             }
         }
 
