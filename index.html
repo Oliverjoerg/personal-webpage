@@ -21,14 +21,16 @@
             --text-color: #333;
             --light-text-color: #666;
             --hover-color: #003d80;
+            --font-family: 'Raleway', sans-serif;
         }
 
         body {
-            font-family: 'Raleway', sans-serif;
+            font-family: var(--font-family);
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
+            line-height: 1.6;
         }
 
         header {
@@ -338,7 +340,7 @@
                 </a>
                 <a href="politics.html" class="hobby-box" style="background-image: url('politics.jpeg');" target="_blank">
                     <p>Politics</p>
-                    <img src="politics.jpeg alt="Politics" style="display:none;">
+                    <img src="politics.jpeg" alt="Politics" style="display:none;">
                 </a>
                 <a href="current.html" class="hobby-box" style="background-image: url('current.jpeg');" target="_blank">
                     <p>Current Affairs</p>
