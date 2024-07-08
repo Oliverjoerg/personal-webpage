@@ -15,6 +15,20 @@
             color: #333;
         }
 
+        nav {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
         header {
             background: url('travel.tiff') no-repeat center center/cover;
             color: #fff;
@@ -41,6 +55,13 @@
             z-index: 2;
         }
 
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
         .container {
             padding: 40px 20px;
             text-align: center;
@@ -57,21 +78,23 @@
         }
 
         .countries {
-            text-align: left;
-            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .country {
             background-color: #fff;
-            margin: 20px 0;
             padding: 20px;
             border-left: 5px solid #007BFF;
-            transition: background-color 0.3s;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
         .country:hover {
             background-color: #e9f5ff;
+            transform: translateY(-5px);
         }
 
         .country h3 {
@@ -85,6 +108,21 @@
             padding: 20px;
         }
 
+        footer p {
+            margin: 0;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
         @media (max-width: 600px) {
             header {
                 padding: 100px 20px;
@@ -92,6 +130,10 @@
 
             header h1 {
                 font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.2em;
             }
 
             .container h2 {
@@ -110,10 +152,17 @@
 </head>
 
 <body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#countries">Countries</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <header>
         <h1>Travel</h1>
+        <p>Explore the world with Oliver Joergensen</p>
     </header>
-    <div class="container">
+    <div class="container" id="countries">
         <h2>Welcome to my travel page</h2>
         <p>Here you will find some highlights and memorable experiences from the countries I have visited.</p>
         <div class="countries">
@@ -189,7 +238,13 @@
     </div>
     <footer>
         <p>© 2024 Oliver Joergensen. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 </html>
