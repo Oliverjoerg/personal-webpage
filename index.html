@@ -35,7 +35,7 @@
         }
 
         header {
-            background: url('globe.tiff') center/cover no-repeat, rgba(0, 0, 0, 0.5);
+            background: url('globe.webp') center/cover no-repeat, rgba(0, 0, 0, 0.5);
             color: #fff;
             padding: 100px 20px;
             text-align: center;
@@ -104,10 +104,8 @@
             justify-content: center;
         }
 
-        .container {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+        .section-padding {
+            padding: 60px 20px;
         }
 
         .hobbies-container {
@@ -215,6 +213,55 @@
         .footer-icons a:hover {
             color: var(--hover-color);
         }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+
+        body.dark-mode nav {
+            background-color: #333;
+        }
+
+        body.dark-mode .card {
+            background: #1e1e1e;
+            box-shadow: none;
+        }
+
+        body.dark-mode header {
+            background: url('globe.webp') center/cover no-repeat, rgba(0, 0, 0, 0.8);
+        }
+
+        body.dark-mode #back-to-top {
+            background-color: #444;
+        }
+
+        body.dark-mode .footer-icons a {
+            color: #ccc;
+        }
+
+        body.dark-mode .footer-icons a:hover {
+            color: #888;
+        }
+
+        #dark-mode-toggle {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        #dark-mode-toggle:hover {
+            background-color: var(--hover-color);
+        }
     </style>
 </head>
 
@@ -225,6 +272,7 @@
     </header>
     <nav aria-label="Main Navigation" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
+            <a class="navbar-brand" href="#home"><img src="logo.png" alt="Logo" style="height:40px;"> Oliver Joergensen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -253,36 +301,37 @@
         </div>
     </nav>
     <button id="back-to-top" aria-label="Back to top">↑</button>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
     <main>
-        <section id="home" class="container welcome-container">
+        <section id="home" class="container section-padding">
             <h2 class="text-center my-4">Welcome</h2>
             <p class="text-center">Hi, my name is Oliver Joergensen. I am a Swiss citizen with Danish origins, currently pursuing a Bachelor's degree in Political Science. I thrive in dynamic environments and am passionate about new challenges, learning new things, and teamwork.</p>
         </section>
-        <section id="about" class="container">
+        <section id="about" class="container section-padding">
             <h2 class="text-center my-4">About Me</h2>
-            <article class="card">
+            <div class="card">
                 <p>My previous positions have equipped me with extensive experience in customer service and payment processing, along with strong adaptability and teamwork skills developed through a variety of roles...</p>
                 <h3 class="text-center my-3">Education</h3>
                 <ul class="list-group">
                     <li class="list-group-item">University of Zürich, BS: Major in Political Science, Minor in Mathematics</li>
                     <li class="list-group-item">SIS Swiss International School, Matura, Zürich, 2018</li>
                 </ul>
-            </article>
+            </div>
         </section>
-        <section id="career" class="container">
+        <section id="career" class="container section-padding">
             <h2 class="text-center my-4">Career</h2>
-            <article class="card">
+            <div class="card">
                 <h4>Joe & the Juice (2018 - 2020)</h4>
                 <p>Part-Time Employee: Juicer responsible for customer contact, product manufacture for direct sale, sales, and cash register management.</p>
                 <h4>Kita Sumatra (03.2021 - 09.2021)</h4>
                 <p>Civilian service assignment involving household and environmental work, social pedagogy, and parental work.</p>
                 <h4>McDonald's (04.2022 - 02.2023)</h4>
                 <p>Crew Employee responsible for kitchen, storage, waste recycling, cleaning (cash desk, dining room, restrooms, parking lot, Playland, restaurant surroundings).</p>
-            </article>
+            </div>
         </section>
-        <section id="skills" class="container">
+        <section id="skills" class="container section-padding">
             <h2 class="text-center my-4">Skills</h2>
-            <article class="card">
+            <div class="card">
                 <h3 class="text-center my-3">Languages</h3>
                 <ul class="list-group">
                     <li class="list-group-item">German: Native</li>
@@ -294,9 +343,9 @@
                     <li class="list-group-item">Analytical thinking from studying Political Science and Mathematics</li>
                     <li class="list-group-item">Experienced in customer service and payment processing</li>
                 </ul>
-            </article>
+            </div>
         </section>
-        <section id="activities" class="container">
+        <section id="activities" class="container section-padding">
             <h2 class="text-center my-4">Hobbies & Interests</h2>
             <div class="hobbies-container">
                 <a href="fitness.html" class="hobby-box" style="background-image: url('gym.png');" target="_blank">
@@ -325,15 +374,16 @@
                 </a>
             </div>
         </section>
-        <section id="contact" class="container">
+        <section id="contact" class="container section-padding">
             <h2 class="text-center my-4">Contact</h2>
-            <article class="card">
+            <div class="card">
                 <p class="text-center">You can reach me at: <a href="mailto:oliver.joergensen@outlook.com">oliver.joergensen@outlook.com</a></p>
-            </article>
+            </div>
         </section>
     </main>
-    <footer class="text-center py-3 bg-dark text-light">
+    <footer class="text-center py-4 bg-dark text-light">
         <p>© 2024 Oliver Joergensen. All rights reserved.</p>
+        <p><a href="mailto:oliver.joergensen@outlook.com" class="text-light">Contact Me</a></p>
         <div class="footer-icons">
             <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -378,6 +428,13 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
         });
     </script>
     <script type="application/ld+json">
